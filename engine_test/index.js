@@ -1,6 +1,9 @@
 const Chess = require('chess.js').Chess;
 const Engine = require('node-uci').Engine;
-const enginePath = __dirname + '/telnet_engine.sh';
+
+const stockfish  = __dirname + '/stockfish.sh';
+const lc0        = __dirname + '/lc0.sh';
+const enginePath = lc0;
 
 let start = 'r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 3 3';
 start = '8/4N1pk/8/6R1/8/8/8/K7 w - - 0 1';

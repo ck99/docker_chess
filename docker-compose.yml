@@ -13,6 +13,6 @@ services:
     image: ck99/lc0:latest
     hostname: lc0
     volumes:
-      - ./services/engine_lc0/weights/elo_3194:/weights
+      - ./services/engine_lc0/weights/elo_3194:/lc0/weights/file
     ports:
-      - "8080:8080"
+      - "8081:8080"
