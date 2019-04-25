@@ -1,0 +1,18 @@
+version: "2"
+
+services:
+  stockfish:
+    build: services/engine_stockfish
+    image: ck99/stockfish:10
+    hostname: stockfish
+    ports:
+      - "8080:8080"
+
+  lc0:
+    build: services/engine_lc0
+    image: ck99/lc0:latest
+    hostname: lc0
+    volumes:
+      - ./services/engine_lc0/weights/elo_3194:/weights
+    ports:
+      - "8080:8080"
